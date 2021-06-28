@@ -14515,3 +14515,23 @@ There are 1 unused configuration paths:
 2021-06-28 13:41:08.296880 (Thread-79): handling status request
 2021-06-28 13:41:08.298790 (Thread-79): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '812f5e79-8c72-49aa-9b17-d8f0b4c12de6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd0e35278b0>]}
 2021-06-28 13:41:08.299314 (Thread-79): sending response (<Response 2057 bytes [200 OK]>) to 10.0.23.185
+2021-06-28 13:41:13.944563 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd0f8b29c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd0f1c78fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd0f1c78be0>]}
+2021-06-28 13:41:13.944963 (MainThread): Flushing usage events
+2021-06-28 13:41:13.970511 (MainThread): Connection 'model.jaffle_shop.stg_payments' was properly closed.
+2021-06-28 13:41:13.973510 (MainThread): Runtime Error
+  Syntax error near line 5
+  ------------------------------
+  2  | # and underscores. A good package name should reflect your organization's
+  3  | # name or the intended use of these models
+  4  | <<<<<<< HEAD
+  5  | name: 'jaffle_shop'
+  6  | version: '1.0.0'
+  7  | config-version: 2
+  8  | =======
+  
+  Raw Error:
+  ------------------------------
+  mapping values are not allowed here
+    in "<unicode string>", line 5, column 5:
+      name: 'jaffle_shop'
+          ^
